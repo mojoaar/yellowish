@@ -8,6 +8,18 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "time",
+          "style": "diamond",
+          "foreground": "#18354c",
+          "background": "#ffc107",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b0",
+          "properties": {
+            "time_format":"15:04"
+          },
+          "template": " {{ .CurrentDate | date .Format }} "
+        },
+        {
           "type": "path",
           "style": "diamond",
           "foreground": "#ffc107",
@@ -38,6 +50,22 @@
           "foreground": "#18354c",
           "background": "#ffc107",
           "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "go",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#18354c",
+          "background": "#ffc107",
+          "template": " \u202D\uFCD1 {{ .Full }} "
+        },
+        {
+          "type": "az",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#18354c",
+          "background": "#ffc107",
+          "template": " \uFD03 {{ .EnvironmentName }}"
         },
         {
           "type": "root",
