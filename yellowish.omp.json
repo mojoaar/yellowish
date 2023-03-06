@@ -66,7 +66,23 @@
           "powerline_symbol": "\uE0B0",
           "foreground": "#18354c",
           "background": "#ffc107",
-          "template": " \uFD03 {{ .EnvironmentName }}"
+          "template": " \uFD03 {{ .EnvironmentName }} "
+        },
+        {
+          "type": "docker",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#18354c",
+          "background": "#ffc107",
+          "template": " \uf308 {{ .Context }} "
+        },
+        {
+          "type": "kubectl",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#18354c",
+          "background": "#ffc107",
+          "template": " \uFD31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         },
         {
           "type": "root",
